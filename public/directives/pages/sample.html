@@ -1,0 +1,13 @@
+<div class="panel panel-{{data.panelClass}} panel-shop">
+  <div class="panel-heading" ng-if="data.title">
+    <h4 class="panel-title">
+      {{data.title}}
+    </h4>
+  </div>
+  <div class="panel-body">
+    <p ng-if="data.description">
+      {{data.description}}
+    </p>
+    <img ng-if="data.url" src="{{data.url}}" alt="{{data.title}}"></img>
+  </div>
+</div>

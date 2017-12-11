@@ -1,0 +1,24 @@
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12 col-sm-12 col-md-7 col-lg-7">
+      <h1>{{data.title}}</h1>
+      <p>
+        <a ng-repeat="link in data.links" href="{{link.href}}" class="p-x-md" ng-class="{'test': $index < data.links.length - 1}"><i ng-if="link.icon" class="fa fa-{{link.icon}} p-r-sm"></i><span ng-if="link.showLabel">{{link.label}}</span></a>
+      </p>
+      <h4>{{data.subtitle.events}}</h4>
+      <ul>
+        <li ng-repeat="event in data.events"><strong>'{{event.year}}: {{event.action}}</strong> {{event.details}}</li>
+      </ul>
+      <h4>{{data.subtitle.goals}}</h4>
+      <ul>
+        <li ng-repeat="goal in data.goals"><strong>'{{goal.year}}: {{goal.action}}</strong> {{goal.details}}</li>
+      </ul>
+      <p class="contact-section">
+        <a href="{{data.contact.href}}">{{data.contact.label}}</a>
+      </p>
+    </div>
+    <div class="col-xs-12 col-sm-12 col-md-5 col-lg-5">
+
+    </div>
+  </div>
+</div>
