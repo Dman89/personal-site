@@ -4,7 +4,8 @@ const morgan = require('morgan');
 const path = require('path');
 const http = require('http');
 const app = express();
-const cors = require('cors')
+const cors = require('cors');
+const db = require('./database');
 var server = http.createServer(app);
 app.use(morgan('combined'));
 app.use(cors()); // Allows CORS(Cross Origin GET Request)
